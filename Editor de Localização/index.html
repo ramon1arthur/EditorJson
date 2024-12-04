@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JSON Editor</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Editor de Localização em JSON</h1>
+  <h3>by AN01 - v 1.0</h3>
+  <input type="file" id="fileInput" accept=".json">
+
+  <div id="windowContainer">
+    <!-- Barra superior com ícones -->
+    <div id="titleBar">
+      <img src="src/save.png" alt="Salvar" id="saveIcon" title="Salvar">
+      <img src="src/more.png" alt="Novo" id="addKeyBtn" title="Novo">
+      <img src="src/undo.png" alt="Desfazer" id="undoIcon" title="Desfazer">
+      <img src="src/forward.png" alt="Refazer" id="redoIcon" title="Refazer">
+      <img src="src/delete.png" alt="Apagar Chave" id="deleteKeyBtn" title="Apagar Chave">
+      <img src="src/up-arrow.png" alt="Mover Para Cima" id="moveUpBtn" title="Mover Para Cima">
+      <img src="src/down-arrow.png" alt="Mover Para Baixo" id="moveDownBtn" title="Mover Para Baixo">
+      <div id="searchContainer">
+      <input type="text" id="searchInput" placeholder="Pesquisar...">
+        <img src="src/search.png" alt="Pesquisar" id="searchIcon" title="Pesquisar">
+        <div id="searchNav" style="display: none;">
+          <img src="src/up.png" alt="Resultado Anterior" id="searchUp" title="Resultado Anterior">
+          <img src="src/down.png" alt="Próximo Resultado" id="searchDown" title="Próximo Resultado">
+          <img src="src/clear.png" alt="Limpar Pesquisa" id="clearSearch" title="Limpar Pesquisa">
+         </div>
+       </div>
+    </div>
+
+    <!-- Conteúdo da janela -->
+    <div id="editorContainer">
+      <div id="leftPanel">
+        <div id="keyListHeader">
+          <h2>Lista de Chaves</h2>
+        </div>
+        <ul id="keyList"></ul>
+      </div>
+      <div id="rightPanel">
+        <h2>Edição de Valor</h2>
+        <label for="keyInput">Nome da Chave:</label>
+        <input type="text" id="keyInput" placeholder="Edite o nome da chave aqui..." />
+        <label for="valueInput">Valor:</label>
+        <textarea id="valueInput" placeholder="Edite o valor aqui..."></textarea>
+        <label for="commentInput">Comentário:</label>
+        <textarea id="commentInput" placeholder="Edite o comentário aqui..."></textarea>
+        <button id="updateBtn">Atualizar</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

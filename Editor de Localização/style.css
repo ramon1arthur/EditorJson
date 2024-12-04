@@ -1,0 +1,167 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  margin-bottom: 2px;
+}
+
+h3 {
+  margin-top: 8px;
+  margin-bottom: 20px;
+}
+
+input[type="file"] {
+  margin-bottom: 20px;
+}
+
+#windowContainer {
+  width: 90%;
+  height: 600px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+#titleBar {
+  display: flex;
+  align-items: center;
+  padding: 5px 10px;
+  background-color: #f8f5f2; /* Tonalidade creme ou offwhite */
+  color: #000;
+}
+
+#titleBar img {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+/* Contêiner de Pesquisa */
+#searchContainer {
+  display: flex;
+  align-items: center;
+  margin-left: auto; /* Empurra para a direita */
+}
+
+#searchInput {
+  padding: 5px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+}
+
+#searchIcon {
+  width: 24px;
+  height: 24px;
+  background-color: #e0e0e0;
+  border: 1px solid #ccc;
+  border-left: none;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+}
+
+#searchNav {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+}
+
+#searchNav img {
+  width: 24px;
+  height: 24px;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+
+#editorContainer {
+  display: flex;
+  flex: 1;
+  height: calc(100% - 50px); /* Altura ajustada considerando a barra de título */
+  overflow: hidden; /* Previne rolagem indesejada */
+}
+
+#leftPanel {
+  width: 30%;
+  background-color: #f9f9f9;
+  border-right: 1px solid #ccc;
+  overflow-y: auto; /* Garante a rolagem vertical */
+  overflow-x: hidden; /* Remove a rolagem horizontal */
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Define a altura completa do contêiner */
+}
+
+#keyListHeader {
+  padding: 10px;
+  background-color: #e0e0e0;
+  border-bottom: 1px solid #ccc;
+  text-align: center;
+}
+
+#keyList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex: 1;
+  overflow-y: auto; /* Garante a rolagem vertical */
+  overflow-x: hidden; /* Remove a rolagem horizontal */
+  max-height: 100%; /* Garante que a lista respeite o tamanho do contêiner */
+}
+
+#keyList li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  cursor: pointer;
+  background-color: #fff;
+}
+
+#keyList li:hover {
+  background-color: #e0e0e0;
+}
+
+#keyList li.active {
+  background-color: #ffa726; /* Cor de destaque mais forte */
+  color: #fff;
+}
+
+#keyList li.modified {
+  border-left: 5px solid #ffa726;
+}
+
+#rightPanel {
+  width: 70%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+textarea, input[type="text"] {
+  width: 100%;
+  margin: 10px 0;
+  padding: 5px;
+  font-family: monospace;
+  font-size: 14px;
+}
+
+button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
